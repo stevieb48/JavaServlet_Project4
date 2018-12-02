@@ -1,0 +1,77 @@
+/*
+author: Stephen Bailey #970396252
+course: COP4856 201808
+assignment: Project 4
+date: 11/30/2018
+file name: style.css
+version: 1.0
+
+Description:
+Purpose of this CSS file is style the index.html.
+*/
+#background{
+    background-color: lightyellow;
+}
+
+#formTitle{
+    font-size: 28pt;
+    color: white;
+}
+
+#box{
+    text-align: center;
+    background-color: black;    
+    padding: 25px;
+    margin: 20px auto;
+    height: 150px;        
+    width: 400px;
+}
+
+.lblEnterKeyword{
+    color: white;
+}
+
+#results{
+    text-align: center;
+    overflow: hidden;
+}
+
+p{
+    color: brown;
+    font-size: 14pt;
+}
+
+table{
+    margin-left:auto; margin-right:auto;
+}
+
+#mTitle{
+    font-size: 28pt;
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+#mDirector{
+    font-size: 23pt;
+    color: crimson
+}
+
+.mRatings{
+    font-size: 18pt;
+    color: blue;
+}
+
+.mKeywords{
+    text-decoration: underline;
+    font-size: 12pt;
+}
+
+#error{
+    font-size: 28pt;
+    color: red;
+}
+
+#keywordNotFound{
+    font-size: 28pt;
+    color: darkviolet;
+}

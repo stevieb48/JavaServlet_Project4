@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>MovieKeywordSearch_Servlet</servlet-name>
+        <servlet-class>CONTROLLER.MovieKeywordSearch_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MovieKeywordSearch_Servlet</servlet-name>
+        <url-pattern>/MovieKeywordSearch_Servlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <display-name>Movie Keyword Search</display-name>
+    <description>
+        This web application uses html, css, jquery, ajax mehod, java servlet, 
+        java database connection class to ask the user for a movie keyword input.
+        The application will search a database for a movie record that matches 
+        the keyword input and then notify the user with the results either a movie 
+        record or not found response.
+    </description>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

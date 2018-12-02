@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+author: Stephen Bailey #970396252
+course: COP4856 201808
+assignment: Project 4
+date: 11/30/2018
+file name: index.html
+version: 1.0
+
+Description:
+Purpose of this HTML file index.html is to 
+DISPLAY an input box to the user requesting a movie keyword. 
+VALIDATE the input and if valid 
+CALL the callServlet method to search for the keyword.
+-->
+<html>
+    <head>
+        <title>Movie Keyword Search</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="validInput.js"></script>
+        <script type="text/javascript" src="requestXML.js"></script>        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // click event for submit button
+                $('#btnSubmitQuery').click(function () {
+                    // insure contents of results div are empty
+                    $("#results").empty();
+
+                    // validate user input
+                    if (validInput(txtMovieKeyword.value)) {
+                        // call servlet           
+                        callServlet(txtMovieKeyword.value);
+                    } else {
+                        $("#results").append("<h1 id='error'>**** ERROR - Please use characters and numbers only ****");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body id="background">
+        <div id="box">
+            <h1 id="formTitle">Movie Search</h1>
+            <form>
+                <label class="lblEnterKeyword" id="lblEnterKeyword">Enter Keyword:</label><input id="txtMovieKeyword" type="text" /><button id="btnSubmitQuery" type="button">Submit Query</button> 
+            </form>
+        </div>
+        <div id="results">
+        </div>
+    </body>
+</html>
