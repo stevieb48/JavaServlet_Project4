@@ -14,7 +14,7 @@ function callServlet(value)
     $.ajax({
         type: "GET",
         url: "/MovieKeywordSearch_Servlet",
-        dataType: "text/html",
+        dataType: "text/html;charset=UTF-8",
         data: value,
         success: function(responseText){
             // process response

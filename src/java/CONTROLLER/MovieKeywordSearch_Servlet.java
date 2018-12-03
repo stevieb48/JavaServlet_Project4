@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(
         name = "MovieKeywordSearch_Servlet",
         urlPatterns = {"/MovieKeywordSearch_Servlet"},
-        asyncSupported = false)
+        asyncSupported = true)
 public class MovieKeywordSearch_Servlet extends HttpServlet {
 
     /**
@@ -38,7 +38,7 @@ public class MovieKeywordSearch_Servlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
 
         // store keyword parameter
         String keywordInput = request.getParameter("txtMovieKeyword");
@@ -63,7 +63,7 @@ public class MovieKeywordSearch_Servlet extends HttpServlet {
 
         // setup new response
         response.reset();
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
         response.getWriter().write(movieResults);
     }
 
@@ -79,7 +79,7 @@ public class MovieKeywordSearch_Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
         processRequest(request, response);
     }
 
@@ -94,7 +94,7 @@ public class MovieKeywordSearch_Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
         processRequest(request, response);
     }
 
