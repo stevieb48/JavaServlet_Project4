@@ -14,7 +14,7 @@ function callServlet(value)
     // 
     $.ajax({
         type: "GET",
-        url: "/MovieKeywordSearch_Servlet",
+        url: "/SBailey_COP4856_201808_Project4_ver4/MovieKeywordSearch_Servlet",
         dataType: "text/html;charset=UTF-8",
         data: value,
         success: function(responseText){

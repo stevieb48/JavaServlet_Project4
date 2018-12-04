@@ -1,12 +1,13 @@
 /*
 author: Stephen Bailey #970396252
 course: COP4856 201808
-assignment: project 3
+assignment: project 4
 date: 11/02/2018
-file name: prj3_createDB_createTBL_createUSER.sql
+file name: prj4_crtDBSEB48_crtTBLPlaylist.sql
 version: 1.0
 
-Description: The purpose of this MySQL script is to CREATE a database called 'SEB48',
+Description: The purpose of this MySQL script is to 
+CREATE a database called 'SEB48',
 CREATE a table called 'PlaylistSEB48',
 INSERT data into the 'PlaylistSEB48' table,
 The primary key 'PlaylistSEB48ID' is auto incremented,
