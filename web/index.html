@@ -29,11 +29,12 @@ CALL the callServlet method to search for the keyword.
                     // insure contents of results div are empty
                     $("#results").empty();
 
-                    // validate user input
+                    // validate user input, if valid call servlet, else show user inut was not valid
                     if (validInput(txtMovieKeyword.value)) {
                         // call servlet           
                         callServlet(txtMovieKeyword.value);
                     } else {
+                        // show user inut was not valid
                         $("#results").append("<h1 id='error'>**** ERROR - Please use characters and numbers only ****");
                     }
                 });

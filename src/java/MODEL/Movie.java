@@ -2,21 +2,21 @@
  * @author: Stephen Bailey #970396252
  * course: COP4856 201808
  * assignment: Project 4
- * @since: 11/30/2018 file name: searchResults.java
+ * @since: 11/30/2018 file name: Movie.java
  * @version: 2.0
  */
 package MODEL;
 
 /**
- * Description: Purpose of this Java class results is to 
- * DEFINE keyword search query results, 
+ * Description: Purpose of this Java class Movie is to 
+ * DEFINE movie record from a keyword search query results, 
  * DISPLAY contents to the user, 
  * CONTAINS JavaDocs Annotations.
  */
-public class searchResults {
+public class Movie {
 
-    // public CONSTANT
-    public final String NOT_FOUND = "NOT FOUND";
+    // CONSTANT
+    private final String NOT_FOUND = "NOT FOUND";
 
     // instance variables
     public String userKeyword;
@@ -37,13 +37,12 @@ public class searchResults {
     public String keyword5;
 
     /**
-     * Description: Purpose of this constructor is to 
-     * SET the keyword variable from the user input,
-     * SET the remaining variables to null or 0.
+     * Description: Purpose of this constructor is to set the keyword variable
+     * from the user input and set the remaining variables to null or 0.
      *
      * @param keyword represents the users input movie keyword search
      */
-    public searchResults(String keyword) {
+    public Movie(String keyword) {
         this.userKeyword = keyword;
         this.iD = 0;
         this.title = NOT_FOUND;
@@ -64,10 +63,10 @@ public class searchResults {
 
     /**
      * Description: Purpose of this toString is to output the searchResults
-     * instance variables as prepared html.
+     * instance variables.
      *
      * @return toString returns a string representing the contents of a search
-     * result as prepared html.
+     * result.
      */
     @Override
     public String toString() {

@@ -11,6 +11,7 @@
  */
 function callServlet(value)
 {
+    // 
     $.ajax({
         type: "GET",
         url: "/MovieKeywordSearch_Servlet",

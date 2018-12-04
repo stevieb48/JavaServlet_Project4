@@ -26,6 +26,9 @@ import javax.servlet.http.HttpServletResponse;
         urlPatterns = {"/MovieKeywordSearch_Servlet"},
         asyncSupported = true)
 public class MovieKeywordSearch_Servlet extends HttpServlet {
+    
+    // CONSTANT
+    private final String NOT_FOUND = "NOT FOUND";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,24 +41,24 @@ public class MovieKeywordSearch_Servlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");        
 
         // store keyword parameter
         String keywordInput = request.getParameter("txtMovieKeyword");
 
         // create database object with connection
-        databaseCommunication newDatabaseCommunication = new databaseCommunication();
+        DatabaseCommunication newDatabaseCommunication = new DatabaseCommunication();
 
         // pass lowercase keyword to database object requestRecord method and return results object
-        searchResults newSearchResults = newDatabaseCommunication.requestRecord(keywordInput.toLowerCase());
+        Movie newSearchResults = newDatabaseCommunication.requestRecord(keywordInput.toLowerCase());
 
         // new variable to store the new response string
         String movieResults = "";
 
         // if results object title variable equals searchResults CONSTANT "NOT FOUND"
-        if (newSearchResults.title.equals(newSearchResults.NOT_FOUND)) {
+        if (newSearchResults.title.equals(NOT_FOUND)) {
             // store the not found response string
-            movieResults = "<h1 id='keywordNotFound'>SORRY - I could not find a movie in my XML file with the keyword = " + keywordInput;
+            movieResults = "<h1 id='keywordNotFound'>SORRY - I could not find a movie matching the keyword = " + keywordInput;
         } else {
             // store the movie found response string
             movieResults = newSearchResults.toString();
